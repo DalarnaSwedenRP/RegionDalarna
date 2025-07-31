@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Region Dalarna - DSR</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #003087;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        nav {
+            background-color: #005bb5;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #003087;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            color: #003087;
+            margin-bottom: 1rem;
+        }
+
+        .news-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            padding: 0.5rem 0;
+        }
+
+        .service-list li i {
+            color: #005bb5;
+            margin-right: 0.5rem;
+        }
+
+        footer {
+            background-color: #003087;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li a {
+                padding: 0.75rem;
+            }
+
+            header img {
+                max-width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://via.placeholder.com/200x100?text=Region+Dalarna+Logo" alt="Region Dalarna Logo">
+        <h1>Region Dalarna - DSR</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Hem</a></li>
+            <li><a href="#news">Nyheter</a></li>
+            <li><a href="#info">Kommuninformation</a></li>
+            <li><a href="#kontakt info">Regler</a></li>
+            <li><a href="#services">Tjänster</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="home">
+            <h2>Välkommen till Region Dalarna</h2>
+            <p>Välkommen till den officiella informationssidan för Region Dalarna i Dalarna Sweden RP (DSR). Här finner du allt du behöver veta om regionens städer, tjänster och regler.</p>
+        </section>
+        <section id="news">
+            <h2>Nyheter</h2>
+            <div class="news-item">
+                <h3>Ny väg invigd i Falun</h3>
+                <p>2025-07-26: Hedemora brann upp men byggdes upp snabbt.</p>
+            </div>
+            <div class="news-item">
+                <h3>Serveruppdatering</h3>
+                <p>2025-07-26: Nästen hela Dalarna brann men brandkåren lyckades släcka hela dalarna snabbt!</p>
+            </div>
+            <!-- Lägg till fler nyheter här -->
+        </section>
+        <section id="info">
+            <h2>Kommuninformation</h2>
+            <p>Region Dalarna är en fiktiv region i Dalarna Sweden RP, som omfattar flera städer som Falun, Borlänge och Mora. Regionen är känd för sin rika kultur. Här samarbetar personer för att skapa en realistisk och engagerande kommunal upplevelse.</p>
+        </section>
+        <section id="kontakt info">
+            <h2>kontakt info</h2>
+            <ul>
+                <li>Kontakta oss direkt på hemsidan med knappen längst ner till vänster..</li>
+                <li>Vi svarar oftas inom några minuter.</li>
+            </ul>
+        </section>
+        <section id="services">
+            <h2>Tjänster</h2>
+            <ul class="service-list">
+                <li><i class="fas fa-trash-alt"></i> Renhållning och återvinning</li>
+                <li><i class="fas fa-road"></i> Trafik och väghållning</li>
+                <li><i class="fas fa-building"></i> Bygglov och stadsplanering</li>
+                <li><i class="fas fa-shield-alt"></i> Säkerhet och ordningsvakter</li>
+                <li><i class="fas fa-bus"></i> Kollektivtrafik</li>
+            </ul>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; ©2025 Dalarna Sweden RP</p>
+    </footer>
+    <script>
+        // Enkel JavaScript för att hantera smidig scroll till sektioner
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
